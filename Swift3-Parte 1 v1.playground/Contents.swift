@@ -97,25 +97,25 @@ var validGender = (gender.lowercased() == "f") || (gender.lowercased() == "m")
 /*:
  - callout(Exercicio): Implemente de forma que as respostas fiquem corretas
  */
-/*
+
  
 var resposta: Int
 
 // 1. Quanto é 2 elevado a 8?
-resposta = // utilize a função pow
+resposta =  Int(pow(2.0,8.0))
 
 if resposta == 256 {
     print("Resposta correta!")
 }
 
 // 2. Qual a raiz quadrada de 196?
-resposta = // utilize a função sqrt
+resposta = Int(sqrt(196.0))
 
 if resposta == 14 {
     print("Resposta correta!")
 }
- 
-*/
+
+
 
 /*: 
  Tuplas
@@ -133,14 +133,13 @@ print("\(filme.nome) estreou em \(filme.1)")
  */
 
 let periodoGeológico = (periodo: "Cretácio", era: "Mesozoica", inicio: 145, fim: 66)
-/*
- 
-let frase = "Na escala de tempo geológico, o \() " +
-            "ou Cretácico é o período da era \() " +
-            "que está compreendido entre \() milhões" +
-            " e \() milhões de anos atrás, aproximadamente."
 
-*/
+ 
+let frase = "Na escala de tempo geológico, o \(periodoGeológico.periodo) " +
+            "ou Cretácico é o período da era \(periodoGeológico.era) " +
+            "que está compreendido entre \(periodoGeológico.inicio) milhões" +
+            " e \(periodoGeológico.fim) milhões de anos atrás, aproximadamente."
+print(frase)
 /*:
  Arrays
 
@@ -183,13 +182,13 @@ var array: [Any] = [1, true, "Swift"]
 var nomes = ["Douglas", "Marilia", "Roberto", "Carol", "Lucas", "Iasmim", "João", "Zeca"]
 
 // 1. Adicione um novo nome no array
-
+nomes.append("NovoNome")
 // 2. Descubra a posição do nome Lucas
-
+var LucasIndex = nomes.index(of: "Lucas")
 // 3. Remova o nome Lucas
-
+nomes.remove(at:LucasIndex!)
 // 4. Ordene o array em ordem alfabética
-
+nomes.sort()
 /*:
  Dicionários
 
