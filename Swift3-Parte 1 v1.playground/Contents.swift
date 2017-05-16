@@ -539,11 +539,26 @@ protocol Gasolina {
     func injetarCombustívelComAr()
 }
 
-class MotorDeCarro {
-
+class MotorDeCarro: Gasolina {
+    var quantidadeDeCombustível: Int = 20
+    
+    func ativarVela(){
+        print ("a")
+    }
+    func injetarCombustívelComAr(){
+        print ("a")
+    }
 }
 
-class MotorDeCaminhão {
-
+class MotorDeCaminhão: Diesel {
+    
+    var quantidadeDeCombustível: Int
+    
+    init(qtdCombustivel: Int) {
+        self.quantidadeDeCombustível = qtdCombustivel
+    }
+    
+    func injetarArAquecido() {}
+    
+    func injetarCombustívelSobPressão() {}
 }
-
