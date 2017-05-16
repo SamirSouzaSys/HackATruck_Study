@@ -142,6 +142,9 @@ reversed = names.sorted(by: { (s1: String, s2: String) -> Bool in
     return s1 > s2
 })
 
+// Mesma função, utilizando closures
+reversed = names.sorted{ $0 > $1 }
+
 // Sintaxe simplificada
 reversed = names.sorted { $0 > $1 }
 
