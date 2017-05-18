@@ -1,0 +1,66 @@
+Aula de Table View
+
+ENUNCIADO
+
+    Construa uma aplicação para listar animais.
+    Cada animal deve ter um nome, uma espécie e uma imagem.
+
+PASSO A PASSO
+
+- Os passos abaixo foram os passos utilizados para a construção deste projeto.
+- Eles o guiarão pela criação do projeto.
+- Após cada instrução está referenciado o arquivo criado ou modificado por ele.
+- O numero dos passos não corresponde ao número presente nos comentarios no código
+
+
+1) Crie um novo projeto iOS no Xcode, uma Single View Application
+
+2) No storyboard apague a ViewController, adicione uma TableViewcontroller e configure ela para ser a tela inicial
+ARQUIVO: View > Main.storyboard
+
+3) Adicione os componentes necessário na TableViewCell
+    - 2 Labels
+    - 1 ImageView
+ARQUIVO: View > Main.storyboard
+
+3.1) Crie a classe Animal (new file -> swift file) com suas propriedades e método de inicialização (init)
+ARQUIVO: Model > Animal.swift
+
+3.2) Crie uma classe AnimalDAO no arquivo Animal.swift e crie um método estático getList que retorna um array de animais
+ARQUIVO: Model > Animal.swift
+
+4) Crie a classe AnimaisTableViewController, subclasse de UITableViewController
+ARQUIVO: Controller -> AnimaisTableViewController.swift
+
+5) Associe a classe AnimaisTableViewController com a table view controller no storyboard
+ARQUIVO: View > Main.storyboard
+
+6) Crie a classe AnimalTableViewCell, subclasse de UITableViewCell
+ARQUIVO: Model > AnimalTableViewCell.swift
+
+7) Associe a classe AnimalTableViewCell com a TableViewCell na table view controller no storyboard
+ARQUIVO: View > Main.storyboard
+
+8) Crie as outlets da sua table view cell na classe AnimalTableViewCell (CTRL+Clica e arrasta)
+    Lembre-se de usar o Assistent Editor
+ARQUIVOS: View > Main.storyboard + AnimalTableViewCell.swift
+
+9) De volta na classe AnimalTableViewController, crie um array vazio de animais e no método viewDidLoad, inicialize o array de animais com o método getList da classe AnimalDAO
+ARQUIVO: Controller -> AnimaisTableViewController.swift
+
+10) Implemente os métodos que definem o número de seções e o numero de linhas da table view.
+ARQUIVO: Controller -> AnimaisTableViewController.swift
+
+11) Descomente o método:
+override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+e implemente a configuração das células
+    - Defina o identifier do protótipo de célula e atualize sua célula no storyboard (atributo Identifier) de forma que ele fique com o mesmo Identifier que seu método busca.
+    - Faça a conversão da cell para a classe AnimalTableViewCell
+    - Use o indexPath.row para saber em que linha da tabela o método está e pegue o animal correspondente para preencher os dados da célula convertida
+    - Modifique o valor do texto das labels e inicie a imagem
+ARQUIVO: Controller -> AnimaisTableViewController.swift
+
+12) Rode seu projeto
+
+13) Caso não esteja bonitinho ainda, de uma ajeitada nas constraints lá no storyboard.
+ARQUIVO: View > Main.storyboard

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aFl-NZ-jNT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lugares para visitar!-->
+        <scene sceneID="iPQ-f2-wdt">
+            <objects>
+                <tableViewController id="vt0-zW-4yN" customClass="DestinosTableViewController" customModule="AppDeViagens" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="283" sectionHeaderHeight="28" sectionFooterHeight="28" id="t8V-sW-WRL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="lugarIdentifier" rowHeight="283" id="is9-vE-9Hm" customClass="LugarTableViewCell" customModule="AppDeViagens" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="283"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="is9-vE-9Hm" id="VUd-O1-S44">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="282.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1K5-HR-aXS">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="281.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="1K5-HR-aXS" secondAttribute="height" multiplier="4:3" id="cSG-ea-Vh0"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajg-Ix-kM3">
+                                            <rect key="frame" x="10" y="246" width="357" height="25.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1K5-HR-aXS" firstAttribute="top" secondItem="VUd-O1-S44" secondAttribute="top" id="3Dr-R4-8cq"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Ajg-Ix-kM3" secondAttribute="trailing" id="9Qk-4b-dYL"/>
+                                        <constraint firstAttribute="trailing" secondItem="1K5-HR-aXS" secondAttribute="trailing" id="Gc6-kJ-t1p"/>
+                                        <constraint firstItem="Ajg-Ix-kM3" firstAttribute="leading" secondItem="1K5-HR-aXS" secondAttribute="leading" constant="10" id="IZe-hR-bgQ"/>
+                                        <constraint firstItem="1K5-HR-aXS" firstAttribute="leading" secondItem="VUd-O1-S44" secondAttribute="leading" id="c4l-GV-Sy8"/>
+                                        <constraint firstItem="Ajg-Ix-kM3" firstAttribute="bottom" secondItem="1K5-HR-aXS" secondAttribute="bottom" constant="-10" id="qAQ-tz-cju"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fotoImageView" destination="1K5-HR-aXS" id="nN0-92-xbz"/>
+                                    <outlet property="nomeLabel" destination="Ajg-Ix-kM3" id="bfv-2G-RmC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="vt0-zW-4yN" id="dNf-qQ-YJ7"/>
+                            <outlet property="delegate" destination="vt0-zW-4yN" id="aDQ-FV-KhV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Lugares para visitar!" id="Eu0-ha-fWc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qBT-06-mDv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="764" y="-5.8470764617691158"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6cX-zL-LOT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aFl-NZ-jNT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jPa-CD-6Zm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vt0-zW-4yN" kind="relationship" relationship="rootViewController" id="BbH-Dn-Xbk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V7c-kW-Vzc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175.19999999999999" y="-5.8470764617691158"/>
+        </scene>
+    </scenes>
+</document>

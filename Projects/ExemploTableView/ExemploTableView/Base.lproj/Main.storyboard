@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ibt-mR-AGy">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Animais-->
+        <scene sceneID="Lf3-X5-gaR">
+            <objects>
+                <tableViewController id="6j3-Sx-GhI" customClass="AnimaisTableViewController" customModule="ExemploTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="108" sectionHeaderHeight="28" sectionFooterHeight="28" id="8bu-QR-btL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="animalIdentifier" rowHeight="108" id="Mpy-ZQ-1iN" customClass="AnimalTableViewCell" customModule="ExemploTableView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="108"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mpy-ZQ-1iN" id="oDa-Fi-9zn">
+                                    <frame key="frameInset" width="375" height="107"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GS3-gT-b80" userLabel="Cell Stack View">
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N6d-jZ-cZE">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="90" id="RzA-Im-oMC"/>
+                                                        <constraint firstAttribute="width" constant="90" id="V5r-sL-Jly"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qXz-aT-Rf1" userLabel="Info Stack View">
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDR-a5-L4X">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwi-ma-e7f">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="GS3-gT-b80" secondAttribute="trailing" id="Ygs-bQ-eyX"/>
+                                        <constraint firstItem="GS3-gT-b80" firstAttribute="top" secondItem="oDa-Fi-9zn" secondAttribute="topMargin" id="tPF-oG-ZtR"/>
+                                        <constraint firstItem="GS3-gT-b80" firstAttribute="leading" secondItem="oDa-Fi-9zn" secondAttribute="leadingMargin" id="xrS-Oc-XVI"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="espécieLabel" destination="iwi-ma-e7f" id="hP6-8Z-ZPs"/>
+                                    <outlet property="fotoDoAnimal" destination="N6d-jZ-cZE" id="TZW-IG-vhg"/>
+                                    <outlet property="nomeLabel" destination="fDR-a5-L4X" id="AhB-aU-RSM"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6j3-Sx-GhI" id="epS-QJ-gHX"/>
+                            <outlet property="delegate" destination="6j3-Sx-GhI" id="TNx-9o-e6A"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Animais" id="Rhm-8W-4kn"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tf0-sR-THs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="828" y="90.404797601199405"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mia-su-Q4C">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ibt-mR-AGy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dqo-1p-a0L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6j3-Sx-GhI" kind="relationship" relationship="rootViewController" id="pS8-Xs-yuW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hnE-Uf-kTC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-111.2" y="90.404797601199405"/>
+        </scene>
+    </scenes>
+</document>
