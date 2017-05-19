@@ -10,8 +10,6 @@ import UIKit
 
 class LugarTableViewCell: UITableViewCell {
 
-    
-    
     @IBOutlet weak var fotoImageView: UIImageView!
     @IBOutlet weak var nomeLabel: UILabel!
     

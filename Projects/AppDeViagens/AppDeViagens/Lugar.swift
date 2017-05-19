@@ -16,8 +16,6 @@ class Lugar{
         self.nome = nome
         self.nomeDaFoto = nomeDaFoto
     }
-    
-    
 }
 
 //Data access Object
