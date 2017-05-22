@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IEh-sP-iuS">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -30,13 +30,13 @@
         <!--Minhas Músicas-->
         <scene sceneID="1sw-IE-Krj">
             <objects>
-                <tableViewController id="uep-vh-BbZ" sceneMemberID="viewController">
+                <tableViewController id="uep-vh-BbZ" customClass="ArtistasTableViewController" customModule="desafioStoryBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="79" sectionHeaderHeight="28" sectionFooterHeight="28" id="SnY-2m-k84">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="79" id="dtZ-00-urh">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="artistaIdentifier" rowHeight="79" id="dtZ-00-urh" customClass="ArtistaTableViewCell" customModule="desafioStoryBoard" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="79"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dtZ-00-urh" id="ZgD-ma-kqX">
@@ -68,6 +68,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="subTitleLabel" destination="9dx-mr-A2o" id="IL0-lw-Vjf"/>
+                                    <outlet property="titleLabel" destination="8Y3-Jw-P0b" id="igR-2n-cKd"/>
                                     <segue destination="u6n-2S-mUe" kind="show" id="OG5-xk-hl2"/>
                                 </connections>
                             </tableViewCell>

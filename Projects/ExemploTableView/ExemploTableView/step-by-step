@@ -51,6 +51,10 @@ ARQUIVO: Controller -> AnimaisTableViewController.swift
 10) Implemente os métodos que definem o número de seções e o numero de linhas da table view.
 ARQUIVO: Controller -> AnimaisTableViewController.swift
 
+
+
+
+
 11) Descomente o método:
 override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
 e implemente a configuração das células
