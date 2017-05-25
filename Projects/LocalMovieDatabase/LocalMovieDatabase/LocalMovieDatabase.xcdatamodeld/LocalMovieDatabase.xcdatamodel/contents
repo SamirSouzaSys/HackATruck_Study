@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G1212" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Filme" representedClassName=".Filme" syncable="YES">
+        <attribute name="ano" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="diretor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="titulo" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="genero" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Genero" inverseName="filmes" inverseEntity="Genero" syncable="YES"/>
+    </entity>
+    <entity name="Genero" representedClassName=".Genero" syncable="YES">
+        <attribute name="categoria" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="filmes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Filme" inverseName="genero" inverseEntity="Filme" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Filme" positionX="-36" positionY="-144" width="128" height="103"/>
+        <element name="Genero" positionX="151" positionY="-148" width="128" height="73"/>
+    </elements>
+</model>

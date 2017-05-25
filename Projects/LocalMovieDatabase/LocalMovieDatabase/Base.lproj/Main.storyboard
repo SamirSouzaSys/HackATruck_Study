@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LocalMovieDatabase" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ri3-dj-KhM">
+                                <rect key="frame" x="16" y="36" width="343" height="106"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ano de estreia" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HrY-kr-H4m">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Diretor do Filme" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WdN-dY-e4g">
+                                        <rect key="frame" x="0.0" y="38" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Título do Filme" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O0E-aN-Nsx">
+                                        <rect key="frame" x="0.0" y="76" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGZ-bI-hST">
+                                <rect key="frame" x="16" y="150" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.1116147725" green="0.17024513990000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Adicionar novo Filme">
+                                    <color key="titleColor" red="1" green="0.94941125709999996" blue="0.93900774330000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="adicionarNovoFilme:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GmK-9l-jJ1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jju-0Q-Ux0">
+                                <rect key="frame" x="16" y="204" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.91582133509999997" green="0.29831950689999998" blue="0.3297412945" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Buscar todos os filmes">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buscarTodosOsFilmes" destination="BYZ-38-t0r" eventType="touchUpInside" id="EFA-8j-6sV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amZ-UG-SUX">
+                                <rect key="frame" x="16" y="242" width="343" height="200"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="V37-hy-OCW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ri3-dj-KhM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="Cee-ia-NGu"/>
+                            <constraint firstItem="Ri3-dj-KhM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ECH-5A-8Jb"/>
+                            <constraint firstItem="hGZ-bI-hST" firstAttribute="top" secondItem="Ri3-dj-KhM" secondAttribute="bottom" constant="8" id="RGt-5Q-D7a"/>
+                            <constraint firstItem="amZ-UG-SUX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="RKE-pS-9ZZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jju-0Q-Ux0" secondAttribute="trailing" id="atG-lA-r1Y"/>
+                            <constraint firstItem="hGZ-bI-hST" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bVO-aS-mOX"/>
+                            <constraint firstItem="Jju-0Q-Ux0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hU5-Oi-bQL"/>
+                            <constraint firstItem="Jju-0Q-Ux0" firstAttribute="top" secondItem="hGZ-bI-hST" secondAttribute="bottom" constant="24" id="k8L-nX-BqQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ri3-dj-KhM" secondAttribute="trailing" id="kgL-5D-aSr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="amZ-UG-SUX" secondAttribute="trailing" id="moH-Hf-Pv7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hGZ-bI-hST" secondAttribute="trailing" id="qrp-Ef-Bwa"/>
+                            <constraint firstItem="amZ-UG-SUX" firstAttribute="top" secondItem="Jju-0Q-Ux0" secondAttribute="bottom" constant="8" id="uJD-NG-Nbr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="anoTextField" destination="HrY-kr-H4m" id="xas-n6-1sm"/>
+                        <outlet property="diretorTextField" destination="WdN-dY-e4g" id="w1M-MK-wYd"/>
+                        <outlet property="resultadosLabel" destination="amZ-UG-SUX" id="Z3y-29-bFQ"/>
+                        <outlet property="tituloTextField" destination="O0E-aN-Nsx" id="ekc-yQ-OVh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
