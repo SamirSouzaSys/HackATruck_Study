@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RevisaoUFMA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Faça o seu login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVA-ZJ-gIM">
+                                <rect key="frame" x="126" y="125" width="123" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y5l-ei-9zK">
+                                <rect key="frame" x="106" y="174" width="162" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogt-ct-BrB">
+                                <rect key="frame" x="164" y="225" width="46" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginBtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="rLh-ze-yi5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcV-Cx-8KX">
+                                <rect key="frame" x="145" y="263" width="85" height="30"/>
+                                <state key="normal" title="Cadastre-se"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="fcV-Cx-8KX" secondAttribute="trailing" id="26o-Q0-A5b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="y5l-ei-9zK" secondAttribute="trailing" id="2BQ-m2-XSF"/>
+                            <constraint firstItem="ogt-ct-BrB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9Kp-Qb-toK"/>
+                            <constraint firstItem="ogt-ct-BrB" firstAttribute="top" secondItem="y5l-ei-9zK" secondAttribute="bottom" constant="16" id="GkI-yT-bHG"/>
+                            <constraint firstItem="fcV-Cx-8KX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Vtl-Np-xbd"/>
+                            <constraint firstItem="y5l-ei-9zK" firstAttribute="top" secondItem="QVA-ZJ-gIM" secondAttribute="bottom" constant="16" id="efy-Ng-8fd"/>
+                            <constraint firstItem="y5l-ei-9zK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hd7-WL-xJa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ogt-ct-BrB" secondAttribute="trailing" id="jqY-K7-pyC"/>
+                            <constraint firstItem="fcV-Cx-8KX" firstAttribute="top" secondItem="ogt-ct-BrB" secondAttribute="bottom" constant="16" id="nGJ-Sm-ZcD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="userNameTextField" destination="y5l-ei-9zK" id="KHL-1x-qH2"/>
+                        <segue destination="sE5-vP-rQH" kind="show" identifier="adminSegue" id="dgp-WV-if7"/>
+                        <segue destination="xyP-Nm-d3v" kind="show" identifier="userSegue" id="ANN-IE-dH6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="136.28185907046478"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="60i-cS-PF6">
+            <objects>
+                <viewController id="xyP-Nm-d3v" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F6D-IF-TN5"/>
+                        <viewControllerLayoutGuide type="bottom" id="7hX-d3-S0e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kcY-JE-D5I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h5R-rA-esj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1103" y="514"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ICK-5p-Mh6">
+            <objects>
+                <viewController id="sE5-vP-rQH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PGz-bk-TzJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="A4Z-Ob-9yv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yFf-Hk-QVS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mMZ-3k-UYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1102" y="-184"/>
+        </scene>
+    </scenes>
+</document>
