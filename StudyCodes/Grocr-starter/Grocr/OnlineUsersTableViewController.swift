@@ -21,6 +21,7 @@
  */
 
 import UIKit
+import Firebase
 
 class OnlineUsersTableViewController: UITableViewController {
   
@@ -29,12 +30,56 @@ class OnlineUsersTableViewController: UITableViewController {
   
   // MARK: Properties
   var currentUsers: [String] = []
+  var user: User!
+  
   
   // MARK: UIViewController Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    currentUsers.append("hungry@person.food")
+    //currentUsers.append("hungry@person.food")
+    
+    // 1
+    usersRef.observe(.childAdded, with: { snap in
+      // 2
+      guard let email = snap.value as? String else { return }
+      self.currentUsers.append(email)
+      
+      // 3
+      let row = self.currentUsers.count - 1
+      
+      // 4
+      let indexPath = IndexPath(row: row, section: 0)
+      
+      // 5
+      self.tableView.insertRows(at: [indexPath], with: .top)
+    })
+    
+    usersRef.observe(.childRemoved, with: { snap in
+      guard let emailToFind = snap.value as? String else { return }
+      for (index, email) in self.currentUsers.enumerated() {
+        if email == emailToFind {
+          let indexPath = IndexPath(row: index, section: 0)
+          self.currentUsers.remove(at: index)
+          self.tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+      }
+    })
+    
+    FIRAuth.auth()!.addStateDidChangeListener { auth, user in
+      if let _user = user {
+        self.user = User(authData: _user)
+      } else {
+        do {
+          let usersRef = try self.usersRef.child(self.user.uid)
+        } catch let error as NSError {
+          print(error)
+          self.usersRef.removeValue()
+        }
+      }
+    }
   }
+  
+  let usersRef = FIRDatabase.database().reference(withPath: "online")
   
   // MARK: UITableView Delegate methods
   
@@ -53,6 +98,14 @@ class OnlineUsersTableViewController: UITableViewController {
   
   @IBAction func signoutButtonPressed(_ sender: AnyObject) {
     dismiss(animated: true, completion: nil)
+    
+    do {
+      try FIRAuth.auth()?.signOut()
+      dismiss(animated: true, completion: nil)
+    } catch let error as NSError {
+      print(error.localizedDescription)
+    }
+    
   }
   
 }

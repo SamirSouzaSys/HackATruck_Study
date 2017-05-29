@@ -21,6 +21,7 @@
  */
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
   
@@ -31,9 +32,25 @@ class LoginViewController: UIViewController {
   @IBOutlet weak var textFieldLoginEmail: UITextField!
   @IBOutlet weak var textFieldLoginPassword: UITextField!
   
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    // 1
+    FIRAuth.auth()!.addStateDidChangeListener() { auth, user in
+      // 2
+      if user != nil {
+        // 3
+        self.performSegue(withIdentifier: self.loginToList, sender: nil)
+      }
+    }
+  }
+  
   // MARK: Actions
   @IBAction func loginDidTouch(_ sender: AnyObject) {
     performSegue(withIdentifier: loginToList, sender: nil)
+      FIRAuth.auth()!.signIn(withEmail: textFieldLoginEmail.text!,
+                             password: textFieldLoginPassword.text!)
+    
   }
   
   @IBAction func signUpDidTouch(_ sender: AnyObject) {
@@ -42,7 +59,20 @@ class LoginViewController: UIViewController {
                                   preferredStyle: .alert)
     
     let saveAction = UIAlertAction(title: "Save",
-                                   style: .default) { action in
+                                    style: .default) { action in
+          // 1
+          let emailField = alert.textFields![0]
+          let passwordField = alert.textFields![1]
+                                    
+           // 2
+           FIRAuth.auth()!.createUser(withEmail: emailField.text!,
+           password: passwordField.text!) { user, error in
+            if error == nil {
+              // 3
+              FIRAuth.auth()!.signIn(withEmail: self.textFieldLoginEmail.text!,
+                                     password: self.textFieldLoginPassword.text!)
+            }
+          }
                                     
     }
     
