@@ -1,0 +1,432 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F2057101EDDA2CE0085C0C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F20570F1EDDA2CE0085C0C3 /* AppDelegate.swift */; };
+		3F2057121EDDA2CE0085C0C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2057111EDDA2CE0085C0C3 /* ViewController.swift */; };
+		3F2057151EDDA2CE0085C0C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F2057131EDDA2CE0085C0C3 /* Main.storyboard */; };
+		3F2057171EDDA2CE0085C0C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F2057161EDDA2CE0085C0C3 /* Assets.xcassets */; };
+		3F20571A1EDDA2CE0085C0C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F2057181EDDA2CE0085C0C3 /* LaunchScreen.storyboard */; };
+		3F2057221EDDA3EA0085C0C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F2057211EDDA3EA0085C0C3 /* GoogleService-Info.plist */; };
+		3F2057241EDDA9560085C0C3 /* BuscarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2057231EDDA9560085C0C3 /* BuscarTableViewController.swift */; };
+		3F2057281EDDB0F00085C0C3 /* Universidade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2057271EDDB0F00085C0C3 /* Universidade.swift */; };
+		D83280B122B8C8E0C091BBE5 /* Pods_easyGradute_Sam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 613AB4AA250F3A139F777F2B /* Pods_easyGradute_Sam.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3F20570C1EDDA2CE0085C0C3 /* easyGradute_Sam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = easyGradute_Sam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F20570F1EDDA2CE0085C0C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3F2057111EDDA2CE0085C0C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3F2057141EDDA2CE0085C0C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3F2057161EDDA2CE0085C0C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F2057191EDDA2CE0085C0C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3F20571B1EDDA2CE0085C0C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F2057211EDDA3EA0085C0C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3F2057231EDDA9560085C0C3 /* BuscarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuscarTableViewController.swift; path = Controllers/BuscarTableViewController.swift; sourceTree = "<group>"; };
+		3F2057271EDDB0F00085C0C3 /* Universidade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Universidade.swift; sourceTree = "<group>"; };
+		4F747521F040363F67489574 /* Pods-easyGradute_Sam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easyGradute_Sam.release.xcconfig"; path = "Pods/Target Support Files/Pods-easyGradute_Sam/Pods-easyGradute_Sam.release.xcconfig"; sourceTree = "<group>"; };
+		613AB4AA250F3A139F777F2B /* Pods_easyGradute_Sam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_easyGradute_Sam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD6AB4EB988951594E63EA59 /* Pods-easyGradute_Sam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easyGradute_Sam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-easyGradute_Sam/Pods-easyGradute_Sam.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F2057091EDDA2CE0085C0C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D83280B122B8C8E0C091BBE5 /* Pods_easyGradute_Sam.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F181EE91EDEE640001448CC /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				3F20570F1EDDA2CE0085C0C3 /* AppDelegate.swift */,
+			);
+			name = Other;
+			path = easyGradute_Sam;
+			sourceTree = "<group>";
+		};
+		3F2057031EDDA2CE0085C0C3 = {
+			isa = PBXGroup;
+			children = (
+				3F2057211EDDA3EA0085C0C3 /* GoogleService-Info.plist */,
+				3F181EE91EDEE640001448CC /* Other */,
+				3F2057291EDDB8C20085C0C3 /* Layouts */,
+				3F2057261EDDB0D20085C0C3 /* Models */,
+				3F2057251EDDA9C20085C0C3 /* Controllers */,
+				3F20570E1EDDA2CE0085C0C3 /* easyGradute_Sam */,
+				3F20570D1EDDA2CE0085C0C3 /* Products */,
+				9A1DE90E3B6A1EC58B714384 /* Pods */,
+				ECBABA2F8496DE117C7AC473 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3F20570D1EDDA2CE0085C0C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F20570C1EDDA2CE0085C0C3 /* easyGradute_Sam.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F20570E1EDDA2CE0085C0C3 /* easyGradute_Sam */ = {
+			isa = PBXGroup;
+			children = (
+				3F2057111EDDA2CE0085C0C3 /* ViewController.swift */,
+				3F2057161EDDA2CE0085C0C3 /* Assets.xcassets */,
+				3F20571B1EDDA2CE0085C0C3 /* Info.plist */,
+			);
+			path = easyGradute_Sam;
+			sourceTree = "<group>";
+		};
+		3F2057251EDDA9C20085C0C3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3F2057231EDDA9560085C0C3 /* BuscarTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		3F2057261EDDB0D20085C0C3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3F2057271EDDB0F00085C0C3 /* Universidade.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		3F2057291EDDB8C20085C0C3 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				3F2057131EDDA2CE0085C0C3 /* Main.storyboard */,
+				3F2057181EDDA2CE0085C0C3 /* LaunchScreen.storyboard */,
+			);
+			name = Layouts;
+			path = easyGradute_Sam;
+			sourceTree = "<group>";
+		};
+		9A1DE90E3B6A1EC58B714384 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD6AB4EB988951594E63EA59 /* Pods-easyGradute_Sam.debug.xcconfig */,
+				4F747521F040363F67489574 /* Pods-easyGradute_Sam.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ECBABA2F8496DE117C7AC473 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				613AB4AA250F3A139F777F2B /* Pods_easyGradute_Sam.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F20570B1EDDA2CE0085C0C3 /* easyGradute_Sam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F20571E1EDDA2CE0085C0C3 /* Build configuration list for PBXNativeTarget "easyGradute_Sam" */;
+			buildPhases = (
+				6B174589AB142212FC5D2D83 /* [CP] Check Pods Manifest.lock */,
+				3F2057081EDDA2CE0085C0C3 /* Sources */,
+				3F2057091EDDA2CE0085C0C3 /* Frameworks */,
+				3F20570A1EDDA2CE0085C0C3 /* Resources */,
+				B35DEF73BBABF27C1F68FE54 /* [CP] Embed Pods Frameworks */,
+				D3027392AFDD1C7060053D32 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = easyGradute_Sam;
+			productName = easyGradute_Sam;
+			productReference = 3F20570C1EDDA2CE0085C0C3 /* easyGradute_Sam.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F2057041EDDA2CE0085C0C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = SamirSouza;
+				TargetAttributes = {
+					3F20570B1EDDA2CE0085C0C3 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 3F2057071EDDA2CE0085C0C3 /* Build configuration list for PBXProject "easyGradute_Sam" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3F2057031EDDA2CE0085C0C3;
+			productRefGroup = 3F20570D1EDDA2CE0085C0C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F20570B1EDDA2CE0085C0C3 /* easyGradute_Sam */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F20570A1EDDA2CE0085C0C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F20571A1EDDA2CE0085C0C3 /* LaunchScreen.storyboard in Resources */,
+				3F2057221EDDA3EA0085C0C3 /* GoogleService-Info.plist in Resources */,
+				3F2057171EDDA2CE0085C0C3 /* Assets.xcassets in Resources */,
+				3F2057151EDDA2CE0085C0C3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6B174589AB142212FC5D2D83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B35DEF73BBABF27C1F68FE54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-easyGradute_Sam/Pods-easyGradute_Sam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3027392AFDD1C7060053D32 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-easyGradute_Sam/Pods-easyGradute_Sam-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F2057081EDDA2CE0085C0C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F2057281EDDB0F00085C0C3 /* Universidade.swift in Sources */,
+				3F2057121EDDA2CE0085C0C3 /* ViewController.swift in Sources */,
+				3F2057241EDDA9560085C0C3 /* BuscarTableViewController.swift in Sources */,
+				3F2057101EDDA2CE0085C0C3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3F2057131EDDA2CE0085C0C3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F2057141EDDA2CE0085C0C3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3F2057181EDDA2CE0085C0C3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F2057191EDDA2CE0085C0C3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3F20571C1EDDA2CE0085C0C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3F20571D1EDDA2CE0085C0C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F20571F1EDDA2CE0085C0C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD6AB4EB988951594E63EA59 /* Pods-easyGradute_Sam.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = easyGradute_Sam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rw.firebase.easygraduate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3F2057201EDDA2CE0085C0C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F747521F040363F67489574 /* Pods-easyGradute_Sam.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = easyGradute_Sam/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rw.firebase.easygraduate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F2057071EDDA2CE0085C0C3 /* Build configuration list for PBXProject "easyGradute_Sam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F20571C1EDDA2CE0085C0C3 /* Debug */,
+				3F20571D1EDDA2CE0085C0C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F20571E1EDDA2CE0085C0C3 /* Build configuration list for PBXNativeTarget "easyGradute_Sam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F20571F1EDDA2CE0085C0C3 /* Debug */,
+				3F2057201EDDA2CE0085C0C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F2057041EDDA2CE0085C0C3 /* Project object */;
+}
