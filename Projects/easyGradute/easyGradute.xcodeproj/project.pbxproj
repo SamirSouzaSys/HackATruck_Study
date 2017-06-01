@@ -15,6 +15,7 @@
 		3F181F091EDEECB0001448CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F181F081EDEECB0001448CC /* GoogleService-Info.plist */; };
 		3F181F0E1EDEFFE6001448CC /* Universidade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F181F0D1EDEFFE6001448CC /* Universidade.swift */; };
 		3F181F101EDF0027001448CC /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F181F0F1EDF0027001448CC /* Review.swift */; };
+		3F1E53F81EE032FD0073E234 /* Curso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1E53F71EE032FD0073E234 /* Curso.swift */; };
 		DE65B1EADA4F6BD70CCAAC72 /* Pods_easyGradute.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3A90C9B86D73B9F118AF30 /* Pods_easyGradute.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		3F181F081EDEECB0001448CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3F181F0D1EDEFFE6001448CC /* Universidade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Universidade.swift; sourceTree = "<group>"; };
 		3F181F0F1EDF0027001448CC /* Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		3F1E53F71EE032FD0073E234 /* Curso.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curso.swift; sourceTree = "<group>"; };
 		83622641B64288E756903CFB /* Pods-easyGradute.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easyGradute.debug.xcconfig"; path = "Pods/Target Support Files/Pods-easyGradute/Pods-easyGradute.debug.xcconfig"; sourceTree = "<group>"; };
 		9C76400D40DA7E52EBED7A00 /* Pods-easyGradute.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-easyGradute.release.xcconfig"; path = "Pods/Target Support Files/Pods-easyGradute/Pods-easyGradute.release.xcconfig"; sourceTree = "<group>"; };
 		EB3A90C9B86D73B9F118AF30 /* Pods_easyGradute.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_easyGradute.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,7 @@
 			children = (
 				3F181F0D1EDEFFE6001448CC /* Universidade.swift */,
 				3F181F0F1EDF0027001448CC /* Review.swift */,
+				3F1E53F71EE032FD0073E234 /* Curso.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F1E53F81EE032FD0073E234 /* Curso.swift in Sources */,
 				3F181F0E1EDEFFE6001448CC /* Universidade.swift in Sources */,
 				3F181F101EDF0027001448CC /* Review.swift in Sources */,
 				3F181EF91EDEEBED001448CC /* ViewController.swift in Sources */,
