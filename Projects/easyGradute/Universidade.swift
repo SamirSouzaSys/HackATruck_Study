@@ -15,16 +15,16 @@ struct Universidade {
     let nome: String
     let descricao: String
     let ref: FIRDatabaseReference?
-    let review: Review?
-    let curso: Curso?
+    let review: String
+    let curso: String
     
     init(nome: String, descricao: String, key: String = "") {
         self.key = key
         self.nome = nome
         self.descricao = descricao
         self.ref = nil
-        self.review = nil
-        self.curso = nil
+        self.review = ""
+        self.curso = ""
     }
     
     init(snapshot: FIRDataSnapshot) {
@@ -32,8 +32,8 @@ struct Universidade {
         key = snapshot.key
         nome = snapshotValue["nome"] as! String
         descricao = snapshotValue["descricao"] as! String
-        review = snapshotValue["review"] as? Review
-        curso = snapshotValue["curso"] as? Curso
+        review = snapshotValue["review"] as! String
+        curso = snapshotValue["curso"] as! String
 
         ref = snapshot.ref
     }
@@ -42,8 +42,9 @@ struct Universidade {
         return [
             "key": key,
             "nome": nome,
-            "descricao": descricao
-            //,"review": review ?? <#default value#>
+            "descricao": descricao,
+            "curso": curso,
+            "review": review
         ]
     }
     

@@ -19,17 +19,21 @@ struct Curso {
     let imagem: String
     let conteudo: String
     let link: String
-    let ref: FIRDatabaseReference?
+    var ref: FIRDatabaseReference?
+    //let universidade: String?
+    var Timestamp: String {
+        return "\(NSDate().timeIntervalSince1970 * 1000)"
+    }
     
     init(key: String, titulo: String, descricao: String, imagem: String, conteudo: String, link:String){
         self.ref = nil
+        //self.universidade = nil
         self.key = key
         self.titulo = titulo
         self.descricao = descricao
         self.imagem = imagem
         self.conteudo = conteudo
-        self.link = link
-    }
+        self.link = link    }
     
     init(snapshot: FIRDataSnapshot) {
         let snapshotValue = snapshot.value as! [String: AnyObject]
@@ -40,6 +44,7 @@ struct Curso {
         imagem = snapshotValue["imagem"] as! String
         conteudo = snapshotValue["conteudo"] as! String
         link = snapshotValue["link"] as! String
+        //universidade = snapshotValue["universidade"] as! String
         
         ref = snapshot.ref
     }
@@ -51,7 +56,8 @@ struct Curso {
             "descricao" : descricao,
             "imagem" : imagem,
             "conteudo" : conteudo,
-            "link" : link
+            "link" : link,
+            //"universidade" : universidade
         ]
     }
 }

@@ -65,18 +65,28 @@ class OnlineUsersTableViewController: UITableViewController {
       }
     })
     
+//    FIRAuth.auth()!.addStateDidChangeListener { auth, user in
+//      if let _user = user {
+//        self.user = User(authData: _user)
+//      } else {
+//        do {
+//          let usersRef = try self.usersRef.child(self.user.uid)
+//        } catch let error as NSError {
+//          print(error)
+//          self.usersRef.removeValue()
+//        }
+//      }
+//    }
+    
     FIRAuth.auth()!.addStateDidChangeListener { auth, user in
       if let _user = user {
         self.user = User(authData: _user)
       } else {
-        do {
-          let usersRef = try self.usersRef.child(self.user.uid)
-        } catch let error as NSError {
-          print(error)
-          self.usersRef.removeValue()
-        }
+        let userRef = self.usersRef.child(self.user.uid)
+        userRef.removeValue()
       }
     }
+    
   }
   
   let usersRef = FIRDatabase.database().reference(withPath: "online")
@@ -104,8 +114,7 @@ class OnlineUsersTableViewController: UITableViewController {
       dismiss(animated: true, completion: nil)
     } catch let error as NSError {
       print(error.localizedDescription)
-    }
-    
+    }    
   }
   
 }
